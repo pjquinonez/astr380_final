@@ -1,0 +1,18 @@
+# Folders
+data/
+images/
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+# Project files
+*.png
+*.jpg
+*.sql
+*.mp4
+*.m4v
+*.csv
+*.html
+*.pdf
+*.gif
