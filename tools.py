@@ -79,9 +79,9 @@ neptune = {
     'name':'Neptune',
     'mass':1.02413e26,
     'radius':2.4622e7,
-    'maj_ax':4495.06*(10**3)*(10**6),
+    'maj_ax':4.49506e12,
     'eccen':0.0113,
-    'orb_vel':5.43*(10**3),
+    'orb_vel':5.43e3,
     'color':'blue',
 }
 
@@ -92,7 +92,8 @@ def orb_rad_calc(a,b):
     return (((a**2)+(b**2))/2)**(1/2)
 def grav_a(self,other):
     return (-1)*(other['mass']/(np.linalg.norm(self['pos']-other['pos'])**2))*G*((self['pos']-other['pos'])/np.linalg.norm(self['pos']-other['pos']))
-#function
+
+# functions
 def solarsystem_reset(i):
     i['orb_theta'] = random.random()*2*np.pi
     i['pos'] = i['orb_rad']*np.array([np.cos(i['orb_theta']),np.sin(i['orb_theta'])])
