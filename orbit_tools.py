@@ -169,7 +169,7 @@ def solar_system(bodies, est=False, end_time=31536000*5, time_increments=3600, r
         authenticity = 'FAKE'
     if not est:
         authenticity = ''
-    new_folder = os.getcwd() + '\\' + authenticity + ' Planetary Orbit ' + current
+    new_folder = os.getcwd() + '\\images\\' + authenticity + ' Planetary Orbit ' + current
     frames_folder = new_folder + '\\Frames'
     os.mkdir(new_folder)
     os.mkdir(frames_folder)
