@@ -89,6 +89,8 @@ neptune = {
     'orb_vel':5.43e3,
     'color':'blue',
 }
+all_bodies = [sun,mercury,venus,earth,mars,jupiter,saturn,uranus,neptune]
+inner_bodies = [sun,mercury,venus,earth,mars]
 
 # equations
 def min_ax_calc(a,e):
@@ -105,11 +107,6 @@ def solarsystem_reset(i):
     i['vel'] = i['orb_vel']*np.array([np.cos(i['orb_theta']+(np.pi/2)),np.sin(i['orb_theta']+(np.pi/2))])
     i['time_span'][:,0] = np.array([i['pos'],i['vel'],np.array([0,0])])
     return
-
-# current values
-all_bodies = [sun,mercury,venus,earth,mars,jupiter,saturn,uranus,neptune]
-inner_bodies = [sun,mercury,venus,earth,mars]
-
 
 def solar_system(bodies, est=False, end_time=31536000*5, time_increments=3600, res=300, fps=30, gif_duration=10, perc_increments=10):
     # add some things for bodies
